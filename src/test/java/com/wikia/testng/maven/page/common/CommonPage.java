@@ -2,7 +2,7 @@ package com.wikia.testng.maven.page.common;
 
 import org.openqa.selenium.By;
 
-public class CommonObjects {
+public class CommonPage {
 
 	public enum CommonPageObjects
 	{

@@ -3,7 +3,7 @@ package com.wikia.testng.maven.page.common;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import com.wikia.testng.maven.page.common.CommonObjects.CommonPageObjects;
+import com.wikia.testng.maven.page.common.CommonPage.CommonPageObjects;
 import com.wikia.testng.maven.util.UtilityCommon;
 
 public class Common {

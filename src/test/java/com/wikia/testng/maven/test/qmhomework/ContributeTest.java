@@ -2,10 +2,10 @@ package com.wikia.testng.maven.test.qmhomework;
 
 import org.testng.annotations.Test;
 
-public class Login extends CommonTest{
-
+public class ContributeTest extends CommonTest{
+	
 	@Test
-	public void loginLogout() {
+	public void addVideo() {
         driver.navigate().to(baseurl);
 	}
 }

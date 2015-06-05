@@ -10,13 +10,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UtilityCommon {
-	
+
 	public static int timeoutSec = 180;
-	
+
 	public static void sleepForGivenTime(long time) {
 		try {
 			Thread.sleep(time);
@@ -24,7 +25,7 @@ public class UtilityCommon {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * The waitForElementPresent function will wait for the element for a
 	 * default duration of customized seconds To increase or decrease this time
@@ -84,6 +85,23 @@ public class UtilityCommon {
 		WaitForPageToLoad waitForPageToLoad = new WaitForPageToLoad();
 		waitForPageToLoad.getReadyStateUsingWait(driver);
 	}	
+
+	/**
+	 * Hover mouth cursor over a particular menu item and 
+	 * wait long enough for the text to become visible. 
+	 * 
+	 * @param locator
+	 * @param driver
+	 */
+	public static void hoverOverMenuItem(By locator, WebDriver driver){
+		waitForElementPresent(locator, driver);
+		Actions action = new Actions(driver);
+		WebElement elem = driver.findElement(locator);
+		action.moveToElement(elem);
+		action.perform();
+		sleepForGivenTime(1000);
+	}
+
 	/**
 	 * This function captures a screenshot whenever there is an error happening
 	 * It provides the screenshot for further analysis to determine if it's a 
