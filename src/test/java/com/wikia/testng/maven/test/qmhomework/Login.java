@@ -2,10 +2,10 @@ package com.wikia.testng.maven.test.qmhomework;
 
 import org.testng.annotations.Test;
 
-public class Login {
+public class Login extends CommonTest{
 
 	@Test
-	public void exampleOfTestNgMaven() {
-		System.out.println("This is TestNG-Maven Example");
+	public void loginLogout() {
+        driver.navigate().to(baseurl);
 	}
 }

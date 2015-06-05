@@ -6,8 +6,28 @@ public class CommonObjects {
 
 	public enum CommonPageObjects
 	{
-		HEADER(By.id(""), By.cssSelector("#globalNavigation"), By.xpath("//*[@id=['globalNavigation']"), By.name(""), By.linkText(""));
-
+		HEADER(By.id(""), By.cssSelector("#globalNavigation"), By.xpath("//*[@id=['globalNavigation']"), By.name(""), By.linkText("")),
+		
+		/**	Category dropdown menu **/
+		CATEGORY(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		
+		/** Search box options **/
+		SEARCH_SCOPE(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		SEARCH_BAR(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		SEARCH_GO(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		
+		/**	Sign in dropdown menu **/
+		SIGNIN(By.id(""), By.cssSelector("#AccountNavigation > li > div.links-container.anon > span"), By.xpath("//*[@id='AccountNavigation']/li/div[1]/span"), By.name(""), By.linkText("")),
+		SIGNUP(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		USERNAME(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		PASSWORD(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		FORGET_PASSWORD(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		STAY_LOGGEDIN_CKBX(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		LOGIN(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		FACEBOOK_CONNECT(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		
+		START_A_WIKIA(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText(""));
+		
 		private By id;
 		private By cssPath;
 		private By xPath;

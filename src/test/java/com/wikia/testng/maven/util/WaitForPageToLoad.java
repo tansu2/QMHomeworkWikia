@@ -12,8 +12,6 @@ import com.thoughtworks.selenium.Wait;
 
 public class WaitForPageToLoad extends SeleneseCommand<Void> {
 	Logger log = Logger.getLogger(WaitForPageToLoad.class.getName());
-	private int timeToWait = 250;
-
 	/**
 	 * Overrides the default time to wait (in milliseconds) after a page has
 	 * finished loading.
@@ -21,7 +19,6 @@ public class WaitForPageToLoad extends SeleneseCommand<Void> {
 	 * @param timeToWait
 	 */
 	public void setTimeToWait(int timeToWait) {
-		this.timeToWait = timeToWait;
 	}
 
 	public Wait getReadyStateUsingWait(final WebDriver driver) {

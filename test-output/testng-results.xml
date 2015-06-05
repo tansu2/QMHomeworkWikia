@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122" started-at="2015-06-04T23:49:47Z" finished-at="2015-06-04T23:49:47Z">
+  <suite name="Default suite" duration-ms="151" started-at="2015-06-05T01:13:32Z" finished-at="2015-06-05T01:13:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="122" started-at="2015-06-04T23:49:47Z" finished-at="2015-06-04T23:49:47Z">
+    <test name="Default test" duration-ms="151" started-at="2015-06-05T01:13:32Z" finished-at="2015-06-05T01:13:33Z">
       <class name="com.wikia.testng.maven.test.qmhomework.Login">
-        <test-method status="PASS" signature="exampleOfTestNgMaven()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.Login@726b4082]" name="exampleOfTestNgMaven" duration-ms="64" started-at="2015-06-04T16:49:47Z" finished-at="2015-06-04T16:49:47Z">
+        <test-method status="PASS" signature="exampleOfTestNgMaven()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.Login@379bc1bf]" name="exampleOfTestNgMaven" duration-ms="70" started-at="2015-06-04T18:13:33Z" finished-at="2015-06-04T18:13:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exampleOfTestNgMaven -->

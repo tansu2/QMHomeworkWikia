@@ -1,6 +1,13 @@
 package com.wikia.testng.maven.util;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,8 +28,8 @@ public class UtilityCommon {
 	/**
 	 * The waitForElementPresent function will wait for the element for a
 	 * default duration of customized seconds To increase or decrease this time
-	 * change the value of the integer 'timeoutSec' in "Common.java"
-	 * 
+	 * change the value of the integer 'timeoutSec' 
+	 * 	 
 	 * @param Locator
 	 * @param driver
 	 */
@@ -77,4 +84,26 @@ public class UtilityCommon {
 		WaitForPageToLoad waitForPageToLoad = new WaitForPageToLoad();
 		waitForPageToLoad.getReadyStateUsingWait(driver);
 	}	
+	/**
+	 * This function captures a screenshot whenever there is an error happening
+	 * It provides the screenshot for further analysis to determine if it's a 
+	 * defect or script errors
+	 * 
+	 * @param filename
+	 * @param driver
+	 */
+	public static void capturescreenshot(String filename, WebDriver driver) {
+		try {
+			Date date = new Date();
+			String scrFolder = System.getProperty("user.dir") + "\\screenshots\\"
+					+ new SimpleDateFormat("yyyy-MM-dd").format(date);
+			new File(scrFolder).mkdir();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile, new File(scrFolder + "\\" + filename + "_" + dateFormat.format(date) + ".jpg"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
