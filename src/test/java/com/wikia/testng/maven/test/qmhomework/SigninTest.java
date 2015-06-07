@@ -15,7 +15,7 @@ public class SigninTest extends CommonTest {
 	 * @throws Exception 
 	 * @date 2015-06-05
 	 */
-	@Test
+	@Test(groups = "SigninTest")
 	public void loginLogout() throws Exception {
 		
 		/**

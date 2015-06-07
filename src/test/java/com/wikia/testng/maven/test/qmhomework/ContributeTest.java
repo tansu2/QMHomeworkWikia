@@ -19,7 +19,7 @@ public class ContributeTest extends CommonTest{
 	 * @throws Exception 
 	 * @date 2015-06-07
 	 */
-	@Test
+	@Test(groups = "ContributeTest", dependsOnGroups = "SigninTest")
 	public void addVideo() throws Exception {
 		/**
 		 * Pre-condition
