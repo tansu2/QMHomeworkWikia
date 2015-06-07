@@ -28,7 +28,21 @@ public class Common {
 		driver.findElement(CommonPageObjects.PASSWORD.byLocator()).sendKeys(password);
 
 		UtilityCommon.clickAndWait(CommonPageObjects.LOGIN.byLocator(), driver);
-		Thread.sleep(10000);
 	}
-
+	
+	/**
+	 * This function logs out from the application. 
+	 * @param url
+	 * @param driver
+	 * 
+	 * @throws Exception
+	 */
+	public static void logoutFromPlatform(String url, WebDriver driver) throws Exception {
+		driver.navigate().to(url);
+		UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
+		if (!UtilityCommon.waitForElementPresent(CommonPageObjects.SIGNOUT.byLocator(), driver)) {
+			Assert.fail("Sign out label is not loaded properly.");
+		}
+		UtilityCommon.clickAndWait(CommonPageObjects.SIGNOUT.byLocator(), driver);	
+	}
 }

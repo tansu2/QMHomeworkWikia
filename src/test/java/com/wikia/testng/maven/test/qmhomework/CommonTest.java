@@ -11,12 +11,15 @@ public class CommonTest {
 	public static Config config;
 	public static WebDriver driver;
 	public static String baseurl, homepageurl;
+	public static String username, password;
 	
 	@BeforeClass
     public static void beforeClass() throws Exception{
 		config = new Config(System.getProperty("env"));
         baseurl = config.getProperty("baseURL");
         homepageurl = config.getProperty("homepageURL");
+        username = config.getProperty("username");
+        password = config.getProperty("password");
         String browser = config.getProperty("browser");
         driver = Driver.initializeDriver(browser);
         driver.manage().window().maximize();

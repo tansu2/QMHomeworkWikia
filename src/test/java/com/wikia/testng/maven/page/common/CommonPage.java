@@ -6,6 +6,7 @@ public class CommonPage {
 
 	public enum CommonPageObjects
 	{
+		/** Header icon **/
 		HEADER(By.id(""), By.cssSelector("#globalNavigation"), By.xpath("//*[@id=['globalNavigation']"), By.name(""), By.linkText("")),
 		
 		/**	Category dropdown menu **/
@@ -17,15 +18,24 @@ public class CommonPage {
 		SEARCH_GO(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
 		
 		/**	Sign in dropdown menu **/
-		SIGNIN(By.id(""), By.cssSelector("#AccountNavigation > li > div.links-container.anon > span"), By.xpath("//*[@id='AccountNavigation']/li/div[1]/span"), By.name(""), By.linkText("")),
+		SIGNIN(By.id(""), By.cssSelector("#AccountNavigation > li"), By.xpath("//*[@id='AccountNavigation']/li"), By.name(""), By.linkText("")),
 		SIGNUP(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
-		USERNAME(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
-		PASSWORD(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		USERNAME(By.id("usernameInput"), By.cssSelector("#usernameInput"), By.xpath(""), By.name(""), By.linkText("")),
+		PASSWORD(By.id("passwordInput"), By.cssSelector("#passwordInput"), By.xpath(""), By.name(""), By.linkText("")),
 		FORGET_PASSWORD(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
-		STAY_LOGGEDIN_CKBX(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
-		LOGIN(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
+		STAY_LOGGEDIN_CKBX(By.id(""), By.cssSelector("#UserLoginDropdown > form > fieldset > div.input-group.keep-logged-in > label > input"), By.xpath(""), By.name(""), By.linkText("")),
+		LOGIN(By.id(""), By.cssSelector("#UserLoginDropdown > form > fieldset > div.input-group.login-button > input"), By.xpath(""), By.name(""), By.linkText("")),
 		FACEBOOK_CONNECT(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")),
 		
+		/** User dropdown menu after sign in **/
+		MESSAGE_WALL(By.id(""), By.cssSelector("#AccountNavigation > li > ul > li:nth-child(1) > a"), By.xpath(""), By.name(""), By.linkText("")),
+		MY_PREFERENCE(By.id(""), By.cssSelector("#AccountNavigation > li > ul > li:nth-child(2) > a"), By.xpath(""), By.name(""), By.linkText("")),
+		HELP(By.id(""), By.cssSelector("#AccountNavigation > li > ul > li:nth-child(3) > a"), By.xpath(""), By.name(""), By.linkText("")),
+		SIGNOUT(By.id(""), By.cssSelector("#AccountNavigation > li > ul > li:nth-child(4) > a"), By.xpath(""), By.name(""), By.linkText("")),
+		
+		/** Notification dropdown menu after sign in **/
+		
+		/** Start a wikia **/
 		START_A_WIKIA(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText(""));
 		
 		private By id;

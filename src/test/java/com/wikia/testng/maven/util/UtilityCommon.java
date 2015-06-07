@@ -87,7 +87,7 @@ public class UtilityCommon {
 	}	
 
 	/**
-	 * Hover mouth cursor over a particular menu item and 
+	 * Hover mouse over a particular menu item and 
 	 * wait long enough for the text to become visible. 
 	 * 
 	 * @param locator
@@ -97,8 +97,7 @@ public class UtilityCommon {
 		waitForElementPresent(locator, driver);
 		Actions action = new Actions(driver);
 		WebElement elem = driver.findElement(locator);
-		action.moveToElement(elem);
-		action.perform();
+		action.moveToElement(elem).perform();
 		sleepForGivenTime(1000);
 	}
 
