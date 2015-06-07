@@ -22,6 +22,8 @@ public class Common {
 		if (!UtilityCommon.waitForElementPresent(CommonPageObjects.SIGNIN.byLocator(), driver)) {
 			Assert.fail("Sign in label is not loaded properly.");
 		}
+		UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
+		
 		driver.findElement(CommonPageObjects.USERNAME.byLocator()).clear();
 		driver.findElement(CommonPageObjects.USERNAME.byLocator()).sendKeys(username);
 		driver.findElement(CommonPageObjects.PASSWORD.byLocator()).clear();

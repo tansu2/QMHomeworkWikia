@@ -25,12 +25,13 @@ public class SigninTest extends CommonTest {
 		 *  http://qm-homework.wikia.com/wiki/QM_HomeWork_Wikia
 		 */
 		try{
-			driver.navigate().to(baseurl);	
+			driver.navigate().to(baseURL);	
 			if (!UtilityCommon.waitForElementPresent(CommonPageObjects.SIGNIN.byLocator(), driver)) {
 				Assert.fail("Sign in page is not loaded properly.");
 			} else {
 				String currentURL = driver.getCurrentUrl();
-				Assert.assertEquals(currentURL, homepageurl, "User is not redirected to homepageurl");
+				Assert.assertEquals(currentURL, homePageURL, 
+						"User is not redirected to homePageURL of http://qm-homework.wikia.com/wiki/QM_HomeWork_Wikia");
 			}
 		} catch (AssertionError e){
 			e.getMessage();
@@ -84,6 +85,6 @@ public class SigninTest extends CommonTest {
 		}
 		
 		// User logout
-		Common.logoutFromPlatform(homepageurl, driver);
+		Common.logoutFromPlatform(homePageURL, driver);
 	}
 }

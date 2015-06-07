@@ -6,13 +6,19 @@ public class HomePage {
 	public enum HomePageObjects {
 		HOME_TOPHEADER(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
 		
-		ON_THE_WIKI(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
+		ON_THE_WIKI(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/nav/ul/li[1]/a"), By.name(""), By.linkText("")), 
 		
-		WIKI_CONTENT(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
+		WIKI_CONTENT(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/nav/ul/li[2]/a"), By.name(""), By.linkText("")), 
 		
-		COMMUNITY(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
+		COMMUNITY(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/nav/ul/li[3]/a"), By.name(""), By.linkText("")), 
 		
-		CONTRIBUTE(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
+		/** Contribute dropdown menu **/
+		CONTRIBUTE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav"), By.name(""), By.linkText("")), 
+		EDIT_THIS_PAGE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav/ul/li[1]/a"), By.name(""), By.linkText("")), 
+		ADD_A_VIDEO(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav/ul/li[2]/a"), By.name(""), By.linkText("")), 
+		ADD_A_PHOTO(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav/ul/li[3]/a"), By.name(""), By.linkText("")), 
+		ADD_A_PAGE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav/ul/li[4]/a"), By.name(""), By.linkText("")), 
+		WIKI_ACTIVITY(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiHeader']/div[1]/nav/ul/li[5]/a"), By.name(""), By.linkText("")), 
 		
 		SHARE(By.id(""), By.cssSelector(""), By.xpath(""), By.name(""), By.linkText("")), 
 		

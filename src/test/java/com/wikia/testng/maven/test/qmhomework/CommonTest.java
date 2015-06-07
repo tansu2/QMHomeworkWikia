@@ -10,14 +10,14 @@ import com.wikia.testng.maven.util.Driver;
 public class CommonTest {
 	public static Config config;
 	public static WebDriver driver;
-	public static String baseurl, homepageurl;
+	public static String baseURL, homePageURL, videoAddPageURL;
 	public static String username, password;
 	
 	@BeforeClass
     public static void beforeClass() throws Exception{
 		config = new Config(System.getProperty("env"));
-        baseurl = config.getProperty("baseURL");
-        homepageurl = config.getProperty("homepageURL");
+        baseURL = config.getProperty("baseURL");
+        homePageURL = config.getProperty("homePageURL");
         username = config.getProperty("username");
         password = config.getProperty("password");
         String browser = config.getProperty("browser");
