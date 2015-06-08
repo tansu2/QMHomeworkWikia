@@ -55,6 +55,13 @@ logged and the screenshots will be taken and stored at */screenshots* folder.
 Note that all Selenium Java artifacts are **built with Java 6 (mandatory)**.  Those _will work with any Java >= 6_.
 
 In order to use firefoxdriver, firefox browser is required to be installed.
+Support for Firefox is the latest release, the previous release, the latest ESR release and the previous ESR release.
+
+For example Selenium 2.40.0 (released on Feb 19, 2014) supports Firefox 27, 26, 24, 17
+
+Selenium with Firefox can be run on any platform that Firefox supports for those versions, that also allow users to install a custom Firefox extension.
+
+This project uses Firefox 27.0 as the browser
 
 Adding Chrome Driver to the project
 -----------------------------------
