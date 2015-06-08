@@ -54,6 +54,8 @@ logged and the screenshots will be taken and stored at */screenshots* folder.
 
 Note that all Selenium Java artifacts are **built with Java 6 (mandatory)**.  Those _will work with any Java >= 6_.
 
+In order to use firefoxdriver, firefox browser is required to be installed.
+
 Adding Chrome Driver to the project
 -----------------------------------
 If you need to use chromedriver, you should put the proper driver file downloaded from http://code.google.com/p/chromium/downloads/list into *src/main/resources/driver/chrome*. 

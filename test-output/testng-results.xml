@@ -2,18 +2,21 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="94" started-at="2015-06-07T08:51:16Z" finished-at="2015-06-07T08:51:16Z">
+  <suite name="Default suite" duration-ms="135" started-at="2015-06-07T23:14:13Z" finished-at="2015-06-07T23:14:14Z">
     <groups>
+      <group name="SigninTest">
+        <method signature="SigninTest.loginLogout()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.SigninTest@6bee8099]" name="loginLogout" class="com.wikia.testng.maven.test.qmhomework.SigninTest"/>
+      </group> <!-- SigninTest -->
     </groups>
-    <test name="Default test" duration-ms="94" started-at="2015-06-07T08:51:16Z" finished-at="2015-06-07T08:51:16Z">
-      <class name="com.wikia.testng.maven.test.qmhomework.ContributeTest">
-        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.ContributeTest@6fee5635]" name="beforeClass" is-config="true" duration-ms="0" started-at="2015-06-07T01:51:16Z" finished-at="2015-06-07T01:51:16Z">
+    <test name="Default test" duration-ms="135" started-at="2015-06-07T23:14:13Z" finished-at="2015-06-07T23:14:14Z">
+      <class name="com.wikia.testng.maven.test.qmhomework.SigninTest">
+        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.SigninTest@6bee8099]" name="beforeClass" is-config="true" duration-ms="0" started-at="2015-06-07T16:14:13Z" finished-at="2015-06-07T16:14:13Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at com.wikia.testng.maven.util.Driver.determineBrowser(Driver.java:38)
 	at com.wikia.testng.maven.util.Driver.initializeDriver(Driver.java:17)
-	at com.wikia.testng.maven.test.qmhomework.CommonTest.beforeClass(CommonTest.java:26)
+	at com.wikia.testng.maven.test.qmhomework.CommonTest.beforeClass(CommonTest.java:24)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -44,15 +47,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="SKIP" signature="addVideo()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.ContributeTest@6fee5635]" name="addVideo" duration-ms="2" started-at="2015-06-07T01:51:16Z" finished-at="2015-06-07T01:51:16Z">
+        <test-method status="SKIP" signature="loginLogout()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.SigninTest@6bee8099]" name="loginLogout" duration-ms="3" started-at="2015-06-07T16:14:14Z" finished-at="2015-06-07T16:14:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addVideo -->
-        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.ContributeTest@6fee5635]" name="afterClass" is-config="true" duration-ms="0" started-at="2015-06-07T01:51:16Z" finished-at="2015-06-07T01:51:16Z">
+        </test-method> <!-- loginLogout -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:com.wikia.testng.maven.test.qmhomework.SigninTest@6bee8099]" name="afterClass" is-config="true" duration-ms="0" started-at="2015-06-07T16:14:14Z" finished-at="2015-06-07T16:14:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.wikia.testng.maven.test.qmhomework.ContributeTest -->
+      </class> <!-- com.wikia.testng.maven.test.qmhomework.SigninTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

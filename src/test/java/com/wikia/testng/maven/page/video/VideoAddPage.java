@@ -11,7 +11,7 @@ public class VideoAddPage {
 		VIDEO_ADD_URL(By.id(""), By.cssSelector(""), By.xpath("//*[@id='wpWikiaVideoAddUrl']"), By.name(""), By.linkText("")),
 		VIDEO_ADD_URL_SUBMIT(By.id(""), By.cssSelector(""), By.xpath("//*[@id='mw-content-text']/form/div/input"), By.name(""), By.linkText("")),
 		
-		FLASH_MESSAGE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiaPage']/div[2]/div/div/div/text()[1]"), By.name(""), By.linkText("")),
+		FLASH_MESSAGE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiaPage']/div[2]/div/div/div"), By.name(""), By.linkText("")),
 		FLASH_MESSAGE_FILELINK(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiaPage']/div[2]/div/div/div/a"), By.name(""), By.linkText("")),
 		FLASH_MESSAGE_CLOSE(By.id(""), By.cssSelector(""), By.xpath("//*[@id='WikiaPage']/div[2]/div/div/button"), By.name(""), By.linkText(""));
 		

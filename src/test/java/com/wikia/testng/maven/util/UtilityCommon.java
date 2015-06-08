@@ -6,11 +6,13 @@ import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -68,6 +70,25 @@ public class UtilityCommon {
 			return false;
 		}
 	}
+	
+	/**
+	 * This function waits for the page to load fully.
+	 * 
+	 * @param driver
+	 */
+	public static void waitForPageToLoad(WebDriver driver) {
+		ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver driver) {
+				return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+			}
+		};
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		try {
+			wait.until(expectation);
+		} catch (Throwable error) {
+			error.getMessage();
+		}
+	}
 
 	/**
 	 * The clickAndWait function will wait for a default time of customized
@@ -82,8 +103,7 @@ public class UtilityCommon {
 	public static void clickAndWait(By locator, WebDriver driver) {
 		waitForElementPresent(locator, driver);
 		driver.findElement(locator).click();
-		WaitForPageToLoad waitForPageToLoad = new WaitForPageToLoad();
-		waitForPageToLoad.getReadyStateUsingWait(driver);
+		waitForPageToLoad(driver);
 	}	
 
 	/**
@@ -94,6 +114,7 @@ public class UtilityCommon {
 	 * @param driver
 	 */
 	public static void hoverOverMenuItem(By locator, WebDriver driver){
+		waitForPageToLoad(driver);
 		waitForElementPresent(locator, driver);
 		Actions action = new Actions(driver);
 		WebElement elem = driver.findElement(locator);
