@@ -76,7 +76,8 @@ public class ContributeTest extends CommonTest{
 		 * of http://qm-homework.wikia.com/wiki/Special:WikiaVideoAdd
 		 */
 		try{
-			driver.findElement(HomePageObjects.ADD_A_VIDEO.byLocator()).click();
+			UtilityCommon.clickAndWait(HomePageObjects.ADD_A_VIDEO.byLocator(), driver);
+			
 			if (!(driver.findElement(VideoAddPageObjects.VIDEO_ADD_TITLE.byLocator()).getText().contains("WikiaVideoAdd")
 					&& UtilityCommon.waitForElementPresent(VideoAddPageObjects.VIDEO_ADD_URL.byLocator(), driver)
 					&& UtilityCommon.waitForElementPresent(VideoAddPageObjects.VIDEO_ADD_URL_SUBMIT.byLocator(), driver))) {
@@ -104,7 +105,8 @@ public class ContributeTest extends CommonTest{
 			UtilityCommon.clickAndWait(VideoAddPageObjects.VIDEO_ADD_URL_SUBMIT.byLocator(), driver);
 
 			String flashMessage = driver.findElement(VideoAddPageObjects.FLASH_MESSAGE.byLocator()).getText();
-			Assert.assertTrue(flashMessage.contains("Video page File:" + youtubeVideoName +" was successfully added."),
+			String youtubeVideoNameWithUnderscores = youtubeVideoName.replaceAll(" ", "_");
+			Assert.assertTrue(flashMessage.contains("Video page File:" + youtubeVideoNameWithUnderscores +" was successfully added."),
 					"Flash message with text: 'Video page File:FILENAME was successfully added.' "
 							+ "is not displayed near the top of the page");
 		} catch (AssertionError e){

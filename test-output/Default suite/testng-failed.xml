@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wikia.testng.maven.test.qmhomework.SigninTest">
+      <class name="com.wikia.testng.maven.test.qmhomework.ContributeTest">
         <methods>
-          <include name="loginLogout"/>
+          <include name="afterClass"/>
+          <include name="addVideo"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.wikia.testng.maven.test.qmhomework.SigninTest -->
+      </class> <!-- com.wikia.testng.maven.test.qmhomework.ContributeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
