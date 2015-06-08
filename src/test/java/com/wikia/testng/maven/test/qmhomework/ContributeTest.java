@@ -139,8 +139,8 @@ public class ContributeTest extends CommonTest{
 		 * Expected: Confirmed
 		 */
 		try{
-			Assert.assertEquals(VideoDisplayPageObjects.VIDEO_DISPLAY_TITLE.byLocator(), youtubeVideoName,
-					"The filename is not the same as on the flash message ");			
+			Assert.assertEquals(driver.findElement(VideoDisplayPageObjects.VIDEO_DISPLAY_TITLE.byLocator()).getText(),
+					youtubeVideoName, "The filename is not the same as on the flash message ");			
 		} catch (AssertionError e){
 			e.getMessage();
 			Reporter.log(this.getClass().getSimpleName()+"_Step_6: " + e.getMessage());

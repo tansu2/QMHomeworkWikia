@@ -47,6 +47,10 @@ In any case, default.properties will always be loaded first. More customized pro
 Once the parameters are loaded, the tests will run and if any errors/exceptions occur, the error messages will be
 logged and the screenshots will be taken and stored at */screenshots* folder.
 
+## Report
+Report is stored under */target/surefire-reports/Command line suite*
+HTTP Traffic information is printed out to console via all communication process with server.
+
 ## Requirements
 
 * [Java 6 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
