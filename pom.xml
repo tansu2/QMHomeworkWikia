@@ -24,6 +24,12 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 	<url> http://qm-homework.wikia.com</url>
 	<description>QM homework for Wikia Senior QA Engineer candidate</description>

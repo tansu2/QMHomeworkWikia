@@ -1,11 +1,13 @@
 package com.wikia.testng.maven.test.qmhomework;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.wikia.testng.maven.util.Config;
 import com.wikia.testng.maven.util.Driver;
+import com.wikia.testng.maven.util.LogInitializer;
 
 public class CommonTest {
 	public static Config config;
@@ -16,6 +18,7 @@ public class CommonTest {
 	@BeforeClass
     public static void beforeClass() throws Exception{
 		config = new Config(System.getProperty("env"));
+		PropertyConfigurator.configure(new LogInitializer());
         baseURL = config.getProperty("baseURL");
         homePageURL = config.getProperty("homePageURL");
         username = config.getProperty("username");

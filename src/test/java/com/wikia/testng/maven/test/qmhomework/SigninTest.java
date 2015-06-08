@@ -2,6 +2,7 @@ package com.wikia.testng.maven.test.qmhomework;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.wikia.testng.maven.page.common.Common;
@@ -35,6 +36,7 @@ public class SigninTest extends CommonTest {
 			}
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_1: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_1", driver);
 		}
 		
@@ -54,6 +56,7 @@ public class SigninTest extends CommonTest {
 		}
 		catch(AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_2: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_2", driver);
 		}
 		
@@ -65,6 +68,7 @@ public class SigninTest extends CommonTest {
 		 */
 		boolean signoutFlag = false;
 		try{
+			UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
 			driver.findElement(CommonPageObjects.USERNAME.byLocator()).sendKeys(username);
 			driver.findElement(CommonPageObjects.PASSWORD.byLocator()).sendKeys(password);
 			UtilityCommon.clickAndWait(CommonPageObjects.LOGIN.byLocator(), driver);
@@ -75,10 +79,11 @@ public class SigninTest extends CommonTest {
 			Assert.assertTrue(signoutFlag, "User is not logged in properly");
 			
 			String userTitle = driver.findElement(By.xpath("//*[@id='AccountNavigation']/li/div/a")).getAttribute("title");
-			Assert.assertEquals(userTitle,username + "- My page",
+			Assert.assertEquals(userTitle,username + " - My page",
 					"Username is not displayed instead of the login label");
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_3: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_3", driver);
 		}
 		

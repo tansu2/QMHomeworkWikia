@@ -1,6 +1,7 @@
 package com.wikia.testng.maven.test.qmhomework;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.wikia.testng.maven.page.common.Common;
@@ -44,6 +45,7 @@ public class ContributeTest extends CommonTest{
 			}
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_1: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_1", driver);
 		}
 
@@ -63,6 +65,7 @@ public class ContributeTest extends CommonTest{
 			}
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_2: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_2", driver);
 		}
 
@@ -85,6 +88,7 @@ public class ContributeTest extends CommonTest{
 			}
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_3: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_3", driver);
 		}
 
@@ -105,6 +109,7 @@ public class ContributeTest extends CommonTest{
 							+ "is not displayed near the top of the page");
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_4: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_4", driver);
 		}
 
@@ -121,6 +126,7 @@ public class ContributeTest extends CommonTest{
 					"User is redirected to the http://qm-homework.wikia.com/wiki/File:FILENAME page");
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_5: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_5", driver);
 		}
 
@@ -135,6 +141,7 @@ public class ContributeTest extends CommonTest{
 					"The filename is not the same as on the flash message ");			
 		} catch (AssertionError e){
 			e.getMessage();
+			Reporter.log(this.getClass().getSimpleName()+"_Step_6: " + e.getMessage());
 			UtilityCommon.capturescreenshot(this.getClass().getSimpleName()+"_Step_6", driver);
 		}
 
