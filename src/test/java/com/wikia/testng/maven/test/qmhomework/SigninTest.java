@@ -74,7 +74,6 @@ public class SigninTest extends CommonTest {
 			UtilityCommon.clickAndWait(CommonPageObjects.LOGIN.byLocator(), driver);
 			
 			UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
-			
 			signoutFlag = UtilityCommon.waitForElementPresent(CommonPageObjects.SIGNOUT.byLocator(),driver);
 			Assert.assertTrue(signoutFlag, "User is not logged in properly");
 			

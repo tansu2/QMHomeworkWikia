@@ -43,6 +43,7 @@ public class Common {
 		if (!UtilityCommon.waitForElementPresent(CommonPageObjects.SIGNOUT.byLocator(), driver)) {
 			Assert.fail("Sign out label is not loaded properly.");
 		}
+		UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
 		UtilityCommon.clickAndWait(CommonPageObjects.SIGNOUT.byLocator(), driver);	
 	}
 }

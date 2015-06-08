@@ -13,7 +13,7 @@ import com.wikia.testng.maven.util.UtilityCommon;
 
 public class ContributeTest extends CommonTest{
 
-	public static String youtubeVideoURL, youtubeVideoName;
+	public static String  videoAddPageURL, youtubeVideoURL, youtubeVideoName;
 
 	/**
 	 * @author Tan Su
@@ -28,6 +28,7 @@ public class ContributeTest extends CommonTest{
 		Common.loginToPlatform(baseURL, username, password, driver);
 		videoAddPageURL = config.getProperty("videoAddPageURL");
 		youtubeVideoURL =  config.getProperty("youtubeVideoURL");
+		youtubeVideoName = config.getProperty("youtubeVideoName");
 
 		/**
 		 *  Step 1: 
@@ -105,8 +106,7 @@ public class ContributeTest extends CommonTest{
 			UtilityCommon.clickAndWait(VideoAddPageObjects.VIDEO_ADD_URL_SUBMIT.byLocator(), driver);
 
 			String flashMessage = driver.findElement(VideoAddPageObjects.FLASH_MESSAGE.byLocator()).getText();
-			String youtubeVideoNameWithUnderscores = youtubeVideoName.replaceAll(" ", "_");
-			Assert.assertTrue(flashMessage.contains("Video page File:" + youtubeVideoNameWithUnderscores +" was successfully added."),
+			Assert.assertTrue(flashMessage.contains("Video page File:" + youtubeVideoName +" was successfully added."),
 					"Flash message with text: 'Video page File:FILENAME was successfully added.' "
 							+ "is not displayed near the top of the page");
 		} catch (AssertionError e){

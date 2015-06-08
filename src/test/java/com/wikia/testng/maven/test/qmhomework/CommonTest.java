@@ -12,7 +12,7 @@ import com.wikia.testng.maven.util.LogInitializer;
 public class CommonTest {
 	public static Config config;
 	public static WebDriver driver;
-	public static String baseURL, homePageURL, videoAddPageURL;
+	public static String baseURL, homePageURL;
 	public static String username, password;
 	
 	@BeforeClass
