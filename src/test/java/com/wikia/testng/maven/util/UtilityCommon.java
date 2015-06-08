@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class UtilityCommon {
 
 	public static int timeoutSec = 180;
+	public static long wait = 7000;
 
 	public static void sleepForGivenTime(long time) {
 		try {
@@ -26,6 +27,14 @@ public class UtilityCommon {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * This function pauses the running thread according to the wait time
+	 * specified.
+	 */
+	public static void pause() {
+		UtilityCommon.sleepForGivenTime(wait);
 	}
 
 	/**
@@ -43,12 +52,12 @@ public class UtilityCommon {
 			WebDriverWait wait = new WebDriverWait(driver, timeoutSec);
 			WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 			System.out.println(element);
-			sleepForGivenTime(1000);
+			sleepForGivenTime(7000);
 			if (element != null) {
 				exists = true;
 				break;
 			} else {
-				sleepForGivenTime(1000);
+				sleepForGivenTime(7000);
 			}
 		}
 
@@ -119,7 +128,7 @@ public class UtilityCommon {
 		Actions action = new Actions(driver);
 		WebElement elem = driver.findElement(locator);
 		action.moveToElement(elem).perform();
-		sleepForGivenTime(1000);
+		sleepForGivenTime(7000);
 	}
 
 	/**

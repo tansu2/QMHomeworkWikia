@@ -96,7 +96,6 @@ public class ContributeTest extends CommonTest{
 		 * is displayed near the top of the page
 		 */
 		try{
-			driver.findElement(VideoAddPageObjects.VIDEO_ADD_URL.byLocator()).clear();
 			driver.findElement(VideoAddPageObjects.VIDEO_ADD_URL.byLocator()).sendKeys(youtubeVideoURL);
 			UtilityCommon.clickAndWait(VideoAddPageObjects.VIDEO_ADD_URL_SUBMIT.byLocator(), driver);
 

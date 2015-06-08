@@ -24,9 +24,7 @@ public class Common {
 		}
 		UtilityCommon.hoverOverMenuItem(CommonPageObjects.SIGNIN.byLocator(), driver);
 		
-		driver.findElement(CommonPageObjects.USERNAME.byLocator()).clear();
 		driver.findElement(CommonPageObjects.USERNAME.byLocator()).sendKeys(username);
-		driver.findElement(CommonPageObjects.PASSWORD.byLocator()).clear();
 		driver.findElement(CommonPageObjects.PASSWORD.byLocator()).sendKeys(password);
 
 		UtilityCommon.clickAndWait(CommonPageObjects.LOGIN.byLocator(), driver);
